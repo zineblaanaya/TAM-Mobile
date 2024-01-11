@@ -1,7 +1,9 @@
 import { View, Image, Text, TextInput, TouchableOpacity} from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/core';
 
 export default function ConnexionScreen() {
+  const navigation = useNavigation();
   return (
     <View className="bg-gray-900 h-full w-full ">
     <Image className="h-1/2 w-full absolute " source={require('../assets/Chef-pana.png')} />    
@@ -40,9 +42,12 @@ export default function ConnexionScreen() {
 
   
   <Text className="text-gray-300">Don't have an account ? </Text>
-  <TouchableOpacity>
-    <Text className="text-yellow-400">SignUp </Text>
-  </TouchableOpacity>
+  
+   
+    <TouchableOpacity onPress = {()=> navigation.push('SignUp')}>
+    <Text className="text-yellow-400">SignUp</Text>
+    </TouchableOpacity>
+
 
   <View/>
 

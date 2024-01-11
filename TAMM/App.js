@@ -25,7 +25,7 @@ function App() {
       initialRouteName='Login' 
       screenOptions={{headerShown: false}}>
         <Stack.Screen name="Login" component={ConnexionScreen} />
-        <Stack.Screen name="Signup" component={InscriptionScreen} />
+        <Stack.Screen name="SignUp" component={InscriptionScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
