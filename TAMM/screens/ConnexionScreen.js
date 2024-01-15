@@ -11,7 +11,7 @@ export default function ConnexionScreen() {
     // Validation de l'adresse e-mail
     const emailRegex = /\S+@\S+\.\S+/;
     const isEmailValid = emailRegex.test(email);
-git
+
     if (!isEmailValid) {
       Alert.alert('Erreur', 'Veuillez saisir une adresse e-mail valide.');
       return;
