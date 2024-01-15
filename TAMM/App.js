@@ -11,11 +11,6 @@ import ConnexionScreen from './screens/ConnexionScreen';
 import InscriptionScreen from './screens/InscriptionScreen';
 
 
-
-
-
-
-
 const Stack = createNativeStackNavigator();
 
 function App() {
