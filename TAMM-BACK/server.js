@@ -1,13 +1,19 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const { supabase } = require('./db/supabase');
 const routes = require('./routes/route');
 
 
 const app = express();
+app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get('/user', async (req, res) => {
+  const { data,error } = await supabase.from("user").select("*") 
+  if (error) {
+    return res.status(500).json({error: "erreur lors de la récupération des utlisateurs"});
+    }
+  res.json(data)
+});
 
 
 
