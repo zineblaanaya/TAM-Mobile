@@ -22,10 +22,6 @@ export default function InscriptionScreen() {
 </View>
 
 <View className="bg-gray-300 p-5 rounded-2xl w-full">
-  <TextInput placeholder="dd/mm/yyyy" keyboardType='numeric' maxLength={10} value={Date} placeholderTextColor={'black'}  ></TextInput>
-</View>
-
-<View className="bg-gray-300 p-5 rounded-2xl w-full">
   <TextInput placeholder="Email" placeholderTextColor={'black'}  ></TextInput>
 </View>
 
