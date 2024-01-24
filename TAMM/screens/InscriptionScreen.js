@@ -1,6 +1,21 @@
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/core';
+
+const signUpForm = () =>{
+  const [lastName, setLastName] = useState("")
+  const [firstName, setFirstName] = useState("")
+  const [emailValue, setEmailValue] = useState("")
+  const [passwordValue, setPasswordValue] = useState("")
+  const [confirmpassword, setConfirmPassword] = useState("")
+}
+
+const handleSubmit = (event) => {
+  event.preventDefault()
+  alert (`Bonjour ${emailValue}`)
+  console.log(`${passwordValue}`)
+  setEmailValue
+}
 
 export default function InscriptionScreen() {
   const navigation = useNavigation();
@@ -30,7 +45,7 @@ export default function InscriptionScreen() {
 </View>
 
 <View className="bg-gray-300 p-5 rounded-2xl w-full mb-3">
-  <TextInput placeholder="Confirm Password" placeholderTextColor={'black'} secureTextEntry ></TextInput>
+  <TextInput placeholder="ConfirmPassword" placeholderTextColor={'black'} secureTextEntry ></TextInput>
 </View>
 
 

@@ -2,10 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { supabase } = require('./db/supabase');
 const routes = require('./routes/route');
+const cors = require('cors');
 
 
 const app = express();
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/user', async (req, res) => {
   const { data,error } = await supabase.from("user").select("*") 
